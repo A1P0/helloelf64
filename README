@@ -1,1 +1,14 @@
 helloelf64
+A real basic example in generating a real bare bones
+ELF executable.
+It is a simple "hello world" program that safely exits
+at the end.
+The generated program is effectively this assembly:
+mov rax, 1 			; select write() system call */
+mov rdi, 1 			; select stdout as file descriptor */
+mov rsi, 0x4009A 	; move pointer to our string to rsi
+mov rdx, 0x0F		; move the length of our string to rdx
+syscall 			; actually call write()
+mov rax, 60			; select exit() system call
+mov rdi, 0 			; exit status 0 for success
+syscall				; actually call exit() 
