@@ -22,7 +22,7 @@ int main() {
 		0,			/* Processor-specific flags--there aren't any. */
 		sizeof(Elf64_Ehdr),	/* Size of this header */
 		sizeof(Elf64_Phdr),	/* Size of one entry in the program header table */
-		1,			/* Number of entries in the program header table, 2 in our case */
+		1,			/* Number of entries in the program header table */
 		0,			/* Size of one entry in the section header table */
 		0,			/* Number of entries in the section header table */
 		SHN_UNDEF		/* Section header table index (the section) that contains
